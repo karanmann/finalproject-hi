@@ -3,11 +3,11 @@ export const PRODUCT_QUERY = `
     products {
       data {
         attributes {
-          Title
-          Description
-          Price
-          Slug
-          Image {
+          title
+          description
+          price
+          slug
+          image {
             data {
               attributes {
                 formats
