@@ -6,10 +6,9 @@ export const ProductStyles = styled.div`
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
-
+    cursor: pointer;
     img {
         width: 100%;
-        cursor: pointer;
     }
 
     h2 {
