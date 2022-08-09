@@ -12,7 +12,7 @@ import { useStateContext } from '../../lib/context';
 
 const ProductDetails = () => {
     // Use State
-    const { qty, increaseQty, decreaseQty } = useStateContext();
+    const { qty, increaseQty, decreaseQty, onAdd } = useStateContext();
     console.log(qty);
 
     //Fetch Graphql data
@@ -46,7 +46,11 @@ const ProductDetails = () => {
                         <AiFillPlusCircle onClick={increaseQty} />
                     </button>
                 </Quantity>
-                <Buy>Add to cart</Buy>
+                <Buy
+                    onClick={() => onAdd(data.products.data[0].attributes, qty)}
+                >
+                    Add to cart
+                </Buy>
             </ProductInfo>
         </DetailsStyle>
     );
