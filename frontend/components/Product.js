@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 const Product = ({ product }) => {
     //Extract the info from props
-
     const { title, price, image, slug } = product.attributes;
     return (
         <Link href={`product/${slug}`}>
