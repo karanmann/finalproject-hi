@@ -28,7 +28,8 @@ const ProductDetails = () => {
     if (error) return <p>Oh no... {error.message}</p>;
     //extract our data
 
-    const { title, description, image } = data.products.data[0].attributes;
+    const { title, description, image, price } =
+        data.products.data[0].attributes;
 
     return (
         <DetailsStyle>
@@ -36,6 +37,7 @@ const ProductDetails = () => {
             <ProductInfo>
                 <h3>{title}</h3>
                 <p>{description}</p>
+                <p>{price}</p>
                 <Quantity>
                     <span>Quantity</span>
                     <button>
