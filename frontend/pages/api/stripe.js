@@ -3,33 +3,42 @@ import { Stripe} from "stripe";
 const stripe = new Stripe(`${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`)
 
 const handler = async(req,res) => {
-  if(req.method === "POST") {
-    try{
-      const session = await stripe.checkout.sessions.create({
-        submit_type: "pay",
-        mode: "payment",
-        payment_method_types: ["card"],
-        shipping_address_collection: {
-          allowed_countries: ["UK"]
-        },
-        line_items: req.body.map(item => {
-          return {
-            price_data: {
-              currency: "gbp",
-              product_data: {
-              name: item.title,
-              images: [item.image.data.attributes.formats.thumbnail.url],
-            },
-            unit_amount: item.price * 100, 
+    if(req.method === "POST") {
+      try{
+        const session = await stripe.checkout.sessions.create({
+          submit_type: "pay",
+          mode: "payment",
+          payment_method_types: ["card"],
+          shipping_address_collection: {
+            allowed_countries: ["GB", "US", "SE"]
           },
-          quantity: item.quantity,
-        }
-        }),
-        success_url:`${req.headers.origin}/success`,
-        cancel_url:`${req.headers.origin}/canceled`,
-        
-      },
-    )
+          allow_promotion_codes: true,
+          shipping_options: [
+            {shipping_rate: 'shr_1LVtUWHlWD1zmfL25pPv4uzE'},
+            {shipping_rate: 'shr_1LVthjHlWD1zmfL2TDX0oXCW'}
+          ],
+          line_items: req.body.map(item => {
+            return {
+              price_data: {
+                currency: "gbp",
+                product_data: {
+                name: item.title,
+                images: [item.image.data.attributes.formats.thumbnail.url],
+              },
+              unit_amount: item.price * 100, 
+            },
+            quantity: item.quantity,
+            adjustable_quantity: {
+              enabled: true,
+              minimum: 1
+            }
+          }
+          }),
+          success_url:`${req.headers.origin}/success?&session_id={CHECKOUT_SESSION_ID}`,
+          cancel_url:`${req.headers.origin}/cancelled`,
+          
+        },
+      )
     res.status(200).json(session)
     } catch (error) {
       res.status(error.statusCode || 500).json(error.message)
