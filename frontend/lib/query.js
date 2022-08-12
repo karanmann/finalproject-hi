@@ -29,6 +29,7 @@ query getProduct($slug: String!) {
         title,
         slug,
         description,
+        price,
         image {
           data {
             attributes {
