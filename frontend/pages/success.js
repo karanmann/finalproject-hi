@@ -67,7 +67,7 @@ const Success = ({ order }) => {
                     alt="success"
                     width="100"
                     height="100"
-                    responsive
+                    responsive="true"
                 />
             </Card>
         </Wrapper>

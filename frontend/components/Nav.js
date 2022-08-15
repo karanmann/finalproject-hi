@@ -11,7 +11,6 @@ const { AnimatePresence, motion } = require('framer-motion');
 const Nav = () => {
     const { showCart, setShowCart, totalQuantities } = useStateContext();
     const { user, error, isLoading } = useUser();
-    console.log(user);
 
     return (
         <NavStyles>
