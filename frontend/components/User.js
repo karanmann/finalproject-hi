@@ -11,14 +11,14 @@ const User = () => {
 
     if (!user)
         return (
-            <div onClick={() => route.push('api/auth/login')}>
+            <div onClick={() => route.push('/api/auth/login')}>
                 <FaUserCircle />
                 <h3>Profile</h3>
             </div>
         );
 
     return (
-        <Profile onClick={() => route.push('profile/')}>
+        <Profile onClick={() => route.push('/profile')}>
             <img src={user.picture} alt={user.name}></img>
             <h3>{user.name}</h3>
         </Profile>

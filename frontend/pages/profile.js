@@ -36,7 +36,7 @@ export default function Profile({ user, orders }) {
                         <Order key={order.id}>
                             <div>
                                 <h1>Order Number: {order.id}</h1>
-                                <h2>Amount: £{formatMoney(order.amount)}</h2>
+                                <h2>{formatMoney(order.amount)}</h2>
                             </div>
                             <div>
                                 <h1>Receipt Email: {user.email}</h1>
