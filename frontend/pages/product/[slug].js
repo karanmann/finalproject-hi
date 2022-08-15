@@ -24,10 +24,12 @@ const ProductDetails = () => {
     });
     const { data, fetching, error } = results;
 
+    console.log('RESULTS', results);
+
     if (fetching) return <p>Loading...</p>;
     if (error) return <p>Oh no... {error.message}</p>;
     //extract our data
-
+    console.log('DATA1', data.products);
     const { title, description, image, price } =
         data.products.data[0].attributes;
 
