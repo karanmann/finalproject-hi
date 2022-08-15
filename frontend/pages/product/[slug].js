@@ -9,11 +9,17 @@ import {
 } from '../../styles/ProductDetails';
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 import { useStateContext } from '../../lib/context';
+import toast from 'react-hot-toast';
+import { useEffect } from 'react';
 
 const ProductDetails = () => {
     // Use State
-    const { qty, increaseQty, decreaseQty, onAdd } = useStateContext();
-    console.log(qty);
+    const { qty, increaseQty, decreaseQty, onAdd, setQty } = useStateContext();
+
+    //Reset Qty
+    useEffect(() => {
+        setQty(1);
+    }, []);
 
     //Fetch Graphql data
     const { query } = useRouter();
@@ -24,14 +30,25 @@ const ProductDetails = () => {
     });
     const { data, fetching, error } = results;
 
-    console.log('RESULTS', results);
-
     if (fetching) return <p>Loading...</p>;
     if (error) return <p>Oh no... {error.message}</p>;
     //extract our data
-    console.log('DATA1', data.products);
     const { title, description, image, price } =
         data.products.data[0].attributes;
+
+    const iconImage = (
+        <img
+            src={image.data.attributes.formats.medium.url}
+            height="10"
+            width="10"
+        />
+    );
+    //Create a toast
+    const notify = () => {
+        toast.success(`${title} added to your cart`, {
+            duration: 1500,
+        });
+    };
 
     return (
         <DetailsStyle>
@@ -51,7 +68,10 @@ const ProductDetails = () => {
                     </button>
                 </Quantity>
                 <Buy
-                    onClick={() => onAdd(data.products.data[0].attributes, qty)}
+                    onClick={() => {
+                        onAdd(data.products.data[0].attributes, qty);
+                        notify();
+                    }}
                 >
                     Add to cart
                 </Buy>
