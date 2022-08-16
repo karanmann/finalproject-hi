@@ -18,6 +18,8 @@ export const NavItems = styled.div`
     justify-content: space-around;
     cursor: pointer;
 
+
+    
     div {
         margin-left: 3rem;
         position: relative;
@@ -32,6 +34,8 @@ export const NavItems = styled.div`
     svg {
         font-size: 1.5rem;
     }
+
+
     span {
         background: #ff2626;
         color: white;

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Product = ({ product }) => {
     //Extract the info from props
-    const { title, price, image, slug } = product.attributes;
+    const { title, price, image, slug, availibility } = product.attributes;
     return (
         <Link href={`product/${slug}`}>
             <ProductStyles>
@@ -14,6 +14,7 @@ const Product = ({ product }) => {
                         alt={title}
                     />
                 </div>
+                <h2>{availibility ? "In Stock" : "Out of Stock"}</h2>
                 <h2>{title}</h2>
                 <h3>£{price}</h3>
             </ProductStyles>
