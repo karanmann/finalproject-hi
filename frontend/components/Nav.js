@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import { FiShoppingBag } from 'react-icons/fi';
+import { GiRabbitHead } from 'react-icons/gi';
 import { NavStyles, NavItems } from '../styles/NavStyles';
 import Cart from './Cart';
 import { useStateContext } from '../lib/context';
 import User from './User';
+import Product from './Product';
 import { useUser } from '@auth0/nextjs-auth0';
 
 const { AnimatePresence, motion } = require('framer-motion');
@@ -14,8 +16,12 @@ const Nav = () => {
 
     return (
         <NavStyles>
-            <Link href={'/'}>Rubber Ducky</Link>
+            <Link href={'/'}>#MB2</Link>
             <NavItems>
+                <div>
+                    <GiRabbitHead />
+                    <Link href={'/products'}><h3>Products</h3></Link>
+                </div>
                 <User />
                 <div onClick={() => setShowCart(true)}>
                     {totalQuantities > 0 && (

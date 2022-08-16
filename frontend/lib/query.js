@@ -5,6 +5,7 @@ export const PRODUCT_QUERY = `
         attributes {
           title
           description
+          availibility
           price
           slug
           image {
@@ -29,6 +30,7 @@ query getProduct($slug: String!) {
         title,
         slug,
         description,
+        availibility,
         price,
         image {
           data {
