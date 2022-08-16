@@ -19,8 +19,12 @@ const Nav = () => {
             <Link href={'/'}>#MB2</Link>
             <NavItems>
                 <div>
-                    <GiRabbitHead />
-                    <Link href={'/products'}><h3>Products</h3></Link>
+                    <Link href={'/products'}>
+                    <div>
+                        <GiRabbitHead />
+                        <h3>Products</h3>
+                        </div>
+                    </Link>
                 </div>
                 <User />
                 <div onClick={() => setShowCart(true)}>

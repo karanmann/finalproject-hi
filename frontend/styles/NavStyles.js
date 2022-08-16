@@ -35,7 +35,6 @@ export const NavItems = styled.div`
         font-size: 1.5rem;
     }
 
-
     span {
         background: #ff2626;
         color: white;
