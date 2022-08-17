@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Slider from '../components/Hero/Slider';
+import Tickers from '../components/Hero/Tickers';
 
 const Home = () => {
     return (
@@ -12,6 +13,8 @@ const Home = () => {
 
             <main>
                 <Slider />
+
+                <Tickers />
             </main>
         </div>
     );
