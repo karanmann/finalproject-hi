@@ -16,16 +16,18 @@ const Nav = () => {
 
     return (
         <NavStyles>
-            <Link href={'/'}>#MB2</Link>
+            <Link href={'/'}>
+                <h1 className="logo">
+                    #MB2<sup> ®</sup>
+                </h1>
+            </Link>
             <NavItems>
-                <div>
-                    <Link href={'/products'}>
+                <Link href={'/products'}>
                     <div>
                         <GiRabbitHead />
                         <h3>Products</h3>
-                        </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
                 <User />
                 <div onClick={() => setShowCart(true)}>
                     {totalQuantities > 0 && (

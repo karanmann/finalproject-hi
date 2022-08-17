@@ -10,6 +10,11 @@ export const NavStyles = styled.nav`
     a {
         font-size: 1.2rem;
     }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 `;
 
 export const NavItems = styled.div`
@@ -18,14 +23,21 @@ export const NavItems = styled.div`
     justify-content: space-around;
     cursor: pointer;
 
+    @media screen and (max-width: 600px) {
+        justify-content: center;
+    }
 
-    
     div {
         margin-left: 3rem;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        @media screen and (max-width: 600px) {
+            margin: 1rem;
+    }
+
     }
     h3 {
         font-size: 1rem;
