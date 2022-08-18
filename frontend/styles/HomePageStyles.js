@@ -13,7 +13,7 @@ export const slideUp = keyframes`
         }
 `;
 export const SliderContainer = styled.div`
-    width: 100%;
+    width: 100&;
     height: 50%;
     /* position: relative;
     overflow: hidden; */
@@ -116,8 +116,8 @@ export const TickerWrapper = styled.div`
     overflow: hidden;
 
     img {
-        height: 17.15rem;
-        width: 17.15rem;
+        height: 13rem;
+        width: auto;
     }
 
     .marquee {
@@ -139,21 +139,17 @@ export const TickerWrapper = styled.div`
         flex-direction: column;
     }
 
-    @media (prefers-reduced-motion: reduce) {
-        .marquee__group {
+    .marquee__group {
+        @media (prefers-reduced-motion: reduce) {
             animation-play-state: paused;
         }
     }
 
+    .col__5,
     .col__4,
-    .col__3 {
-        @media (max-width: 800px) {
-            display: none;
-        }
-    }
-
+    .col__3,
     .col__2 {
-        @media (max-width: 600px) {
+        @media (max-width: 876px) {
             display: none;
         }
     }

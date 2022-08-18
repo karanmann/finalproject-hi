@@ -62,6 +62,20 @@ const Tickers = () => {
                     <img src="/images/10.png" alt="Hello" />
                 </div>
             </div>
+            <div className="marquee col__5">
+                    <div className="marquee__group">
+                        <img src="/images/01.png" alt="Hello" />
+                        <img src="/images/02.png" alt="Hello" />
+                        <img src="/images/03.png" alt="Hello" />
+                        <img src="/images/04.png" alt="Hello" />
+                        <img src="/images/05.png" alt="Hello" />
+                        <img src="/images/06.png" alt="Hello" />
+                        <img src="/images/07.png" alt="Hello" />
+                        <img src="/images/08.png" alt="Hello" />
+                        <img src="/images/09.png" alt="Hello" />
+                        <img src="/images/10.png" alt="Hello" />
+                    </div>
+                </div>
         </TickerWrapper>
     );
 };
