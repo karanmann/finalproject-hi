@@ -17,7 +17,7 @@ export const SliderContainer = styled.div`
     height: 50%;
     /* position: relative;
     overflow: hidden; */
-    overflow-y: hidden ;
+    overflow-y: hidden;
 
     .slide {
         /* position: absolute; */
@@ -100,7 +100,7 @@ const scrollY = keyframes`
 export const TickerWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    height:50vh;
+    height: 50vh;
     gap: 1em;
     /* margin: auto; */
     width: 100%;
@@ -142,6 +142,19 @@ export const TickerWrapper = styled.div`
     @media (prefers-reduced-motion: reduce) {
         .marquee__group {
             animation-play-state: paused;
+        }
+    }
+
+    .col__4,
+    .col__3 {
+        @media (max-width: 800px) {
+            display: none;
+        }
+    }
+
+    .col__2 {
+        @media (max-width: 600px) {
+            display: none;
         }
     }
 
