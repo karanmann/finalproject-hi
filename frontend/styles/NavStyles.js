@@ -15,6 +15,22 @@ export const NavStyles = styled.nav`
         flex-direction: column;
         justify-content: center;
     }
+
+    h1 {
+        font-family: var(--primary-font);
+        font-weight: 900;
+        font-size: 3rem;
+        letter-spacing: -0.18rem;
+        display: flex;
+        cursor: pointer;
+
+        sup {
+            font-family: var(--secondary-font);
+            font-size: 1.5rem;
+            margin-left: 0.2rem;
+            margin-top: 0.31rem;
+        }
+    }
 `;
 
 export const NavItems = styled.div`
@@ -36,8 +52,7 @@ export const NavItems = styled.div`
         justify-content: space-between;
         @media screen and (max-width: 600px) {
             margin: 1rem;
-    }
-
+        }
     }
     h3 {
         font-size: 1rem;

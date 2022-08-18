@@ -1,89 +1,230 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import { TickerWrapper } from '../../styles/HomePageStyles';
 
 const Tickers = () => {
-  return (
-    <section className="wrapper--main">
-  
-  <article className="wrapper">
-    <div className="marquee">
-      <div className="marquee__group">
-        <img className="marquee__group_image" src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-      </div>
-    </div>
-  
-    <div className="marquee--reverse">
-      <div className="marquee__group">
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-      </div>
-    </div>
+    return (
+        <TickerWrapper>
+            <div className="marquee">
+                <div className="marquee__group">
+                    <img
+                        className="marquee__group_image"
+                        src="/images/01.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/02.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/03.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/04.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/05.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/06.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/07.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/08.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/09.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/10.png"
+                        alt="Hello"
+                    />
+                </div>
+            </div>
 
-    <div className="marquee">
-      <div className="marquee__group">
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-      </div>
-    </div>
+            <div className="marquee__reverse">
+                <div className="marquee__group">
+                    <img
+                        className="marquee__group_image"
+                        src="/images/01.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/02.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/03.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/04.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/05.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/06.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/07.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/08.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/09.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/10.png"
+                        alt="Hello"
+                    />
+                </div>
+            </div>
 
-    <div className="marquee--reverse">
-      <div className="marquee__group">
-      <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-      </div>
-    </div>
+            <div className="marquee">
+                <div className="marquee__group">
+                    <img
+                        className="marquee__group_image"
+                        src="/images/01.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/02.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/03.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/04.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/05.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/06.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/07.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/08.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/09.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/10.png"
+                        alt="Hello"
+                    />
+                </div>
+            </div>
 
-    <div className="marquee">
-      <div className="marquee__group">
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-        <img className="marquee__group_image"  src="https://images.unsplash.com/photo-1660719036157-72e6e1453b89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80" alt="Hello" />
-      </div>
-    </div>
+            <div className="marquee__reverse">
+                <div className="marquee__group">
+                    <img
+                        className="marquee__group_image"
+                        src="/images/01.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/02.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/03.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/04.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/05.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/06.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/07.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/08.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/09.png"
+                        alt="Hello"
+                    />
+                    <img
+                        className="marquee__group_image"
+                        src="/images/10.png"
+                        alt="Hello"
+                    />
+                </div>
+            </div>
+        </TickerWrapper>
+    );
+};
 
-  </article>
-  
-</section>
-  )
-}
-
-export default Tickers
+export default Tickers;

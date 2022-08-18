@@ -2,29 +2,9 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import Link from 'next/link';
+import { sliderData } from '../../lib/sliderData'
+import { SliderContainer, SlideTitle } from '../../styles/HomePageStyles';
 
-const sliderData = [
-    {
-        title: '#Yoshimitsu',
-        video: 'https://user-images.githubusercontent.com/82885837/185081717-71d793c6-a486-40a4-910a-81f6dbb7d4ed.MOV',
-        url: 'https://www.google.com',
-    },
-    {
-        title: '#Keira Metz',
-        video: 'https://user-images.githubusercontent.com/82885837/184858875-9979d5b0-ec90-4ce9-a15c-f50bd9929a32.MOV',
-        url: 'https://www.google.com',
-    },
-    {
-        title: '#Yoshimitsu',
-        video: 'https://user-images.githubusercontent.com/82885837/185081717-71d793c6-a486-40a4-910a-81f6dbb7d4ed.MOV',
-        url: 'https://www.google.com',
-    },
-    {
-        title: '#Keira Metz',
-        video: 'https://user-images.githubusercontent.com/82885837/184858875-9979d5b0-ec90-4ce9-a15c-f50bd9929a32.MOV',
-        url: 'https://www.google.com',
-    },
-];
 
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,7 +18,6 @@ const Slider = () => {
         setCurrentSlide(
             currentSlide === slideLength - 1 ? 0 : currentSlide + 1
         );
-        console.log('next');
     };
 
     function auto() {
@@ -57,7 +36,7 @@ const Slider = () => {
     }, [currentSlide]);
 
     return (
-        <div className="slider">
+        <SliderContainer>
             {sliderData.map((slide, index) => {
                 return (
                     <div
@@ -69,7 +48,7 @@ const Slider = () => {
                         {index === currentSlide && (
                             <div>
                                 <video
-                                    className="image video"
+                                    className="video"
                                     src={slide.video}
                                     autoPlay
                                     loop
@@ -77,14 +56,14 @@ const Slider = () => {
                                     muted
                                 ></video>
                                 <div className="content">
-                                    <h2 className="logo2">{slide.title}</h2>
+                                    <SlideTitle>{slide.title}</SlideTitle>
                                 </div>
                             </div>
                         )}
                     </div>
                 );
             })}
-        </div>
+        </SliderContainer>
     );
 };
 
