@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import Tickers from '../components/Hero/Tickers';
 
 // HERO
 
@@ -18,6 +17,7 @@ export const SliderContainer = styled.div`
     height: 50%;
     /* position: relative;
     overflow: hidden; */
+    overflow-y: hidden ;
 
     .slide {
         /* position: absolute; */
@@ -113,6 +113,7 @@ export const TickerWrapper = styled.div`
         hsl(0 0% 0% / 1) 95%,
         hsl(0 0% 0% / 0)
     );
+    overflow: hidden;
 
     img {
         height: 17.15rem;

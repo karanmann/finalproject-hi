@@ -31,7 +31,6 @@ export const Order = styled.div`
     }
 `;
 
-
 export const Logout = styled.button `
     width: 20rem;
     padding: 1rem;
