@@ -12,8 +12,9 @@ export const slideUp = keyframes`
             top: 0rem;
         }
 `;
+
 export const SliderContainer = styled.div`
-    width: 100&;
+    width: 100%;
     height: 50%;
     /* position: relative;
     overflow: hidden; */
@@ -155,9 +156,13 @@ export const TickerWrapper = styled.div`
     }
 
     .marquee__reverse .marquee__group {
-        animation: ${scrollY} var(--duration) linear infinite;
+        animation: ${scrollY} 120s linear infinite;
         animation-direction: reverse;
-        animation-delay: -5s;
+        animation-delay: -25s;
+    }
+
+    .marquee__group:hover {
+        animation-play-state: paused;
     }
 
     .marquee__reverse {
