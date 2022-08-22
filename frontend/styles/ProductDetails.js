@@ -4,6 +4,7 @@ export const DetailsStyle = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 5rem;
+    height: 80%;
     img {
         width: 40%;
     }

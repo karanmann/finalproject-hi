@@ -4,7 +4,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import Link from 'next/link';
 import { sliderData } from '../../lib/sliderData'
 import { SliderContainer, SlideTitle } from '../../styles/HomePageStyles';
-
+import Loader from '../Loader';
 
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -35,6 +35,7 @@ const Slider = () => {
         return () => clearInterval(slideInterval);
     }, [currentSlide]);
 
+    if (!sliderData) return <Loader />
     return (
         <SliderContainer>
             {sliderData.map((slide, index) => {

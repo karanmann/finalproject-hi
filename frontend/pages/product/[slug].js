@@ -11,7 +11,7 @@ import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 import { useStateContext } from '../../lib/context';
 import toast from 'react-hot-toast';
 import { useEffect } from 'react';
-
+import Loader from '../../components/Loader';
 const ProductDetails = () => {
     // Use State
     const { qty, increaseQty, decreaseQty, onAdd, setQty } = useStateContext();
@@ -30,7 +30,7 @@ const ProductDetails = () => {
     });
     const { data, fetching, error } = results;
 
-    if (fetching) return <p>Loading...</p>;
+    if (fetching) return <Loader />;
     if (error) return <p>Oh no... {error.message}</p>;
     //extract our data
     const { title, description, image, price } =

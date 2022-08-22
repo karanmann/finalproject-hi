@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { ProductStyles } from '../styles/ProductStyle';
 import Link from 'next/link';
-
+import Loader from './Loader';
 const Product = ({ product }) => {
     //Extract the info from props
     const { title, price, image, slug, availibility } = product.attributes;
+
+    if (!product) return <Loader />
     return (
         <Link href={`product/${slug}`}>
             <ProductStyles>

@@ -1,22 +1,8 @@
 import { useQuery } from 'urql';
 import { PRODUCT_QUERY } from '../../lib/query';
-import Image from 'next/image';
 import { TickerWrapper } from '../../styles/HomePageStyles';
 import ScrollingImages from './ScrollingImages';
-
-// We can replace the below array with the new data from the context API
-const imagesArray = [
-    '/images/01.png',
-    '/images/02.png',
-    '/images/03.png',
-    '/images/04.png',
-    '/images/05.png',
-    '/images/06.png',
-    '/images/07.png',
-    '/images/08.png',
-    '/images/09.png',
-    '/images/10.png',
-];
+import Loader from '../Loader';
 
 const Tickers = () => {
     const [results] = useQuery({ query: PRODUCT_QUERY });
@@ -29,7 +15,7 @@ const Tickers = () => {
     console.log(products);
 
     // const { title, price, image, slug, availibility } = data.products.data.attributes;
-
+    if (!products) return <Loader />
     return (
         <TickerWrapper>
             <div className="marquee col__1">
