@@ -1,8 +1,8 @@
 import Head from 'next/head';
+import Slider from '../components/Hero/Slider';
+import Tickers from '../components/Hero/Tickers';
 
 const Home = () => {
-   
-
     return (
         <div>
             <Head>
@@ -12,7 +12,9 @@ const Home = () => {
             </Head>
 
             <main>
-                <h1>#MB2</h1>
+                <Slider />
+
+                <Tickers />
             </main>
         </div>
     );

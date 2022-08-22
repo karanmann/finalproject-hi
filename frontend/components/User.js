@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { useUser } from '@auth0/nextjs-auth0';
 
 import React from 'react';
+import { Profile } from '../styles/UserStyles';
 
 const User = () => {
     const route = useRouter();
@@ -27,10 +28,3 @@ const User = () => {
 
 export default User;
 
-const Profile = styled.div`
-    img {
-        border-radius: 50%;
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-`;
