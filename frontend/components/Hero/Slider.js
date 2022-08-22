@@ -46,7 +46,7 @@ const Slider = () => {
                         key={index}
                     >
                         {index === currentSlide && (
-                            <div>
+                            <div className="video__container">
                                 <video
                                     className="video"
                                     src={slide.video}

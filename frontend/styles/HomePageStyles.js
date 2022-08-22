@@ -34,11 +34,18 @@ export const SliderContainer = styled.div`
             height: 100%;
         }
     } */
-
+    .video__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
     .video {
         object-fit: cover;
         width: 100%;
+        max-width: 53rem;
         height: 50%;
+        margin-bottom: 0.5rem;
     }
 
     .current {
@@ -49,7 +56,7 @@ export const SliderContainer = styled.div`
     .content {
         position: absolute;
         top: 50;
-        left: 0;
+        left: 30;
         opacity: 0;
         width: 0 auto;
         color: rgba(255, 255, 255, 0.275);
@@ -103,7 +110,6 @@ export const TickerWrapper = styled.div`
     flex-direction: row;
     height: 50vh;
     gap: 1em;
-    /* margin: auto; */
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
@@ -116,11 +122,11 @@ export const TickerWrapper = styled.div`
     );
     overflow: hidden;
     
-    img {
-        height: 13rem;
-        width: 13rem;
+    /* img {
+        /* height: 13rem;
+        width: 13rem; */
         
-    }
+    } */
 
     .marquee {
         display: flex;
@@ -136,7 +142,7 @@ export const TickerWrapper = styled.div`
         align-items: center;
         justify-content: space-around;
         gap: var(--gap);
-        min-width: 100%;
+        min-width: 80%;
         animation: ${scrollY} var(--duration) linear infinite;
         flex-direction: column;
     }
@@ -175,4 +181,19 @@ export const TickerWrapper = styled.div`
         hsl(0 0% 0% / 0)
     ); */
     }
+    
+    .ScrollingImages__container {
+        cursor: pointer;
+        h4 {
+            padding-top: 0.5rem;
+        }
+       
+        p {
+            width: 200px;
+            font-size: 0.7rem;
+            padding-top: 0.5rem;
+    
+        }
+    }
+
 `;
