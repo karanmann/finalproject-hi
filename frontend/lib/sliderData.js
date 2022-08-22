@@ -16,7 +16,7 @@ export const sliderData = [
     },
     {
         title: '#Keira Metz',
-        video: 'https://user-images.githubusercontent.com/82885837/184858875-9979d5b0-ec90-4ce9-a15c-f50bd9929a32.MOV',
+        video: 'https://user-images.githubusercontent.com/82885837/185956912-a1e4b6c1-d738-4403-9bf7-0aa360acdbf1.mov',
         url: 'https://www.google.com',
     },
 ];
