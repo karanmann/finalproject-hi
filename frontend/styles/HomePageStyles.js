@@ -115,10 +115,11 @@ export const TickerWrapper = styled.div`
         hsl(0 0% 0% / 0)
     );
     overflow: hidden;
-
+    
     img {
         height: 13rem;
-        width: auto;
+        width: 13rem;
+        
     }
 
     .marquee {
