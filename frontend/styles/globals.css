@@ -12,7 +12,7 @@ body {
     --secondary-font: 'Archivo', sans-serif;
     --size: clamp(10rem, 1rem + 40vmin, 30rem);
     --gap: calc(var(--size) / 14);
-    --duration: 60s;
+    --duration: 720s;
     --scroll-start: 0;
     --scroll-end: calc(-100% - var(--gap));
     --base-color: #f1f1f1;
