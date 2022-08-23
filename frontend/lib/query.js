@@ -1,6 +1,6 @@
 export const PRODUCT_QUERY = `
   query {
-    products {
+    products (sort: "createdAt:desc", pagination: { limit: 60 }){
       data {
         attributes {
           title

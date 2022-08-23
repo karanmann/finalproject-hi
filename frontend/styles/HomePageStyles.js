@@ -162,7 +162,7 @@ export const TickerWrapper = styled.div`
     }
 
     .marquee__reverse .marquee__group {
-        animation: ${scrollY} 120s linear infinite;
+        animation: ${scrollY} 720s linear infinite;
         animation-direction: reverse;
         animation-delay: -25s;
     }
