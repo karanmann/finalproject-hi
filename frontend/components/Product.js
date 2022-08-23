@@ -1,22 +1,24 @@
 import styled from 'styled-components';
-import { ProductStyles } from '../styles/ProductStyle';
+import { ProductStyles, Pill } from '../styles/ProductStyle';
 import Link from 'next/link';
 import Loader from './Loader';
+import Image from 'next/image';
 const Product = ({ product }) => {
     //Extract the info from props
     const { title, price, image, slug, availibility } = product.attributes;
 
-    if (!product) return <Loader />
+    if (!product) return <Loader />;
     return (
         <Link href={`product/${slug}`}>
             <ProductStyles>
-                <div>
-                    <img
-                        src={image.data.attributes.formats.small.url}
-                        alt={title}
-                    />
-                </div>
-                <h2>{availibility ? "In Stock" : "Out of Stock"}</h2>
+                <Pill availibility={availibility}>{availibility ? 'In Stock' : 'Gone'}</Pill>
+                <Image
+                    src={image.data.attributes.formats.small.url}
+                    alt={title}
+                    width={300}
+                    height={300}
+                />
+
                 <h2>{title}</h2>
                 <h3>£{price}</h3>
             </ProductStyles>
