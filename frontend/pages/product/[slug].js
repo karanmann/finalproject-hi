@@ -1,6 +1,7 @@
 import { useQuery } from 'urql';
 import { GET_PRODUCT_QUERY } from '../../lib/query';
 import { useRouter } from 'next/router';
+import Image from 'next/image'
 import {
     DetailsStyle,
     ProductInfo,
@@ -36,13 +37,14 @@ const ProductDetails = () => {
     const { title, description, image, price } =
         data.products.data[0].attributes;
 
-    const iconImage = (
-        <img
-            src={image.data.attributes.formats.medium.url}
-            height="10"
-            width="10"
-        />
-    );
+    // const iconImage = (
+    //     <img
+    //         src={image.data.attributes.formats.medium.url}
+    //         height="10"
+    //         width="10"
+    //     />
+    // );
+    
     //Create a toast
     const notify = () => {
         toast.success(`${title} added to your cart`, {
@@ -52,7 +54,7 @@ const ProductDetails = () => {
 
     return (
         <DetailsStyle>
-            <img src={image.data.attributes.formats.medium.url} alt={title} />
+            <Image src={image.data.attributes.formats.medium.url} alt={title} height={400} width={400} layout='fixed'/>
             <ProductInfo>
                 <h3>{title}</h3>
                 <p>{description}</p>
