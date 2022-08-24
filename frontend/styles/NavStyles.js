@@ -77,4 +77,9 @@ export const NavItems = styled.div`
         top: -20%;
         pointer-events: none;
     }
+
+    .bXAfLa > span {
+        left: 0%;
+
+    }
 `;

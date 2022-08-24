@@ -43,8 +43,6 @@ const Tickers = () => {
     // if (error || error2 || error3 || error4 || error5)
     //     return <p>Oh no... {error.message}</p>;
 
-    console.LockManager;
-
     // const { title, price, image, slug, availibility } = data.products.data.attributes;
     // if (!product1 ||) return <Loader />;
     return (

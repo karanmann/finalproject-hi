@@ -24,8 +24,7 @@ export const getServerSideProps = withPageAuthRequired({
 
 export default function Profile({ user, orders }) {
     const route = useRouter();
-    console.log('user', user);
-    console.log('orders', orders);
+
     return (
         user && (
             <ProfileWrapper>

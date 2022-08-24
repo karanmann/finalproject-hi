@@ -23,7 +23,6 @@ export const getServerSideProps = async (params) => {
 
 const Success = ({ order }) => {
     const route = useRouter();
-    console.log(order);
 
     return (
         <Wrapper>
