@@ -97,8 +97,9 @@ const Cart = () => {
                                                 .thumbnail.url
                                         }
                                         alt={item.title}
-                                        height={128}
-                                        width={128}
+                                        height="128"
+                                        width="128"
+                                        layout="fixed"
                                     />
                                     <CardInfo>
                                         <h3>{item.title}</h3>

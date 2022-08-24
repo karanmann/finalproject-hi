@@ -19,7 +19,7 @@ const User = () => {
 
     return (
         <Profile onClick={() => route.push('/profile')}>
-            <Image src={user.picture} alt={user.name} height={24} width={24} layout="fixed"></Image>
+            <Image src={user.picture} alt={user.name} height="24" width="24" layout="fixed"></Image>
             <h3>{user.name}</h3>
         </Profile>
     );

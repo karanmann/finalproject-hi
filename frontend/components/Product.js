@@ -15,8 +15,9 @@ const Product = ({ product }) => {
                 <Image
                     src={image.data.attributes.formats.small.url}
                     alt={title}
-                    width={300}
-                    height={300}
+                    width="300"
+                    height="300"
+                    // layout="fixed"
                 />
 
                 <h2>{title}</h2>
