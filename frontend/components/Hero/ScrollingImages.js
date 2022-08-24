@@ -12,8 +12,10 @@ const ScrollingImages = ({ product }) => {
                     key={slug}
                     src={image.data.attributes.formats.small.url}
                     alt={title}
-                    width={200}
-                    height={200}
+                    width="200"
+                    height="200"
+                    layout="responsive"
+                    priority
                 />
                 <h4>{title}</h4>
                 <p>{description}</p>

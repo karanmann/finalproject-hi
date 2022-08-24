@@ -54,7 +54,7 @@ const ProductDetails = () => {
 
     return (
         <DetailsStyle>
-            <Image src={image.data.attributes.formats.medium.url} alt={title} height={400} width={400} layout='fixed'/>
+            <Image src={image.data.attributes.formats.medium.url} alt={title} height="400" width="400" layout='fixed'/>
             <ProductInfo>
                 <h3>{title}</h3>
                 <p>{description}</p>
