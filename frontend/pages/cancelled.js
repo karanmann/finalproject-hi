@@ -16,7 +16,7 @@ const Cancelled = () => {
                 responsive="true"
             />
             <h1>Your Order has been Cancelled</h1>
-            <button onClick={() => route.push('/')}>Continue Shopping</button>
+            <button onClick={() => route.push('/')}><h5>Continue Shopping</h5></button>
         </Card>
     );
 };

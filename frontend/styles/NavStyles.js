@@ -11,7 +11,7 @@ export const NavStyles = styled.nav`
         font-size: 1.2rem;
     }
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
         flex-direction: column;
         justify-content: center;
     }
@@ -78,8 +78,4 @@ export const NavItems = styled.div`
         pointer-events: none;
     }
 
-    .bXAfLa > span {
-        left: 0%;
-
-    }
 `;

@@ -29,6 +29,14 @@ h3 {
     color: var(--secondary);
 }
 
+h5 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
 a {
     color: inherit;
     text-decoration: none;

@@ -54,11 +54,12 @@ const ProductDetails = () => {
 
     return (
         <DetailsStyle>
-            <Image src={image.data.attributes.formats.medium.url} alt={title} height="400" width="400" layout='fixed'/>
+            <Image src={image.data.attributes.formats.medium.url} alt={title} height="400" width="400" responsive/>
             <ProductInfo>
-                <h3>{title}</h3>
+                <h2>{title}</h2>
+                <h4>£{price}</h4>
+                <hr />
                 <p>{description}</p>
-                <p>{price}</p>
                 <Quantity>
                     <span>Quantity</span>
                     <button>
@@ -75,7 +76,7 @@ const ProductDetails = () => {
                         notify();
                     }}
                 >
-                    Add to cart
+                    <h5>Add to cart</h5>
                 </Buy>
             </ProductInfo>
         </DetailsStyle>
