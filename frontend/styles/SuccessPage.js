@@ -2,7 +2,8 @@ import styled from "styled-components";
 const { motion } = require('framer-motion')
 
 export const Wrapper = styled.div`
-  margin: 5rem 15rem;
+  /* margin: 5rem; */
+  text-align: center;
 `;
 
 export const Card = styled(motion.div)`
@@ -26,22 +27,23 @@ export const Card = styled(motion.div)`
     color: white;
     font-weight: 500;
     font-size: 1.2rem;
-    padding: 1rem 2rem;
+    padding: 0.5rem;
     margin: 2rem 0rem;
     cursor: pointer;
-
+    border: none;
+    width: 100%;
   }
 `;
 
 
 export const Address = styled.div`
   font-size: 1rem;
-  width: 100%;
+
 `;
 
 export const OrderInfo = styled.div`
   font-size: 1rem;
-  width: 100%;
+
   div {
     padding-bottom: 1rem;
   }
@@ -49,6 +51,18 @@ export const OrderInfo = styled.div`
 
 
 export const InfoWrapper = styled.div`
+  width: 100%;
   margin-top: 2rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+
+  @media screen and (max-width: 1100px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+
 `;

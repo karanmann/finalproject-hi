@@ -1,5 +1,5 @@
 import { useStateContext } from '../lib/context';
-import Image from 'next/image'
+import Image from 'next/image';
 import {
     CartWrapper,
     CartStyle,
@@ -34,16 +34,16 @@ const cards = {
 // Payment
 
 const handleCheckout = async () => {
-    const stripe = await getStripe()
+    const stripe = await getStripe();
     const response = await fetch('/api/stripe', {
-        method: "POST",
-        headers: { 'Content-Type' : 'application/JSON'},
-        body: JSON.stringify(cartItems)
-    })
+        method: 'POST',
+        headers: { 'Content-Type': 'application/JSON' },
+        body: JSON.stringify(cartItems),
+    });
 
-    const data = await response.json()
-    await stripe.redirectToCheckout({sessionId: data.id})
-}
+    const data = await response.json();
+    await stripe.redirectToCheckout({ sessionId: data.id });
+};
 
 // Function component
 const Cart = () => {
@@ -51,17 +51,17 @@ const Cart = () => {
         useStateContext();
 
     const handleCheckout = async () => {
-        const stripe = await getStripe()
+        const stripe = await getStripe();
         const response = await fetch('/api/stripe', {
-            method: "POST",
-            headers: { 'Content-Type' : 'application/JSON'},
-            body: JSON.stringify(cartItems)
-        })
-    
-        const data = await response.json()
-        await stripe.redirectToCheckout({sessionId: data.id})
-    }
-    
+            method: 'POST',
+            headers: { 'Content-Type': 'application/JSON' },
+            body: JSON.stringify(cartItems),
+        });
+
+        const data = await response.json();
+        await stripe.redirectToCheckout({ sessionId: data.id });
+    };
+
     return (
         <CartWrapper
             animate={{ opacity: 1 }}
@@ -82,8 +82,17 @@ const Cart = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2 }}
                     >
-                        <h1>You have more shopping to do 😉</h1>
-                        <FaShoppingCart />
+                        <h1>Cart Empty!</h1>
+                        {/* <FaShoppingCart /> */}
+                        <video
+                            className="video__emptyCart"
+                            src="https://user-images.githubusercontent.com/82885837/186405953-a9356e64-daa7-4e87-abd1-c021f21bc7c3.mp4"
+                            autoPlay
+                            loop
+                            playsInline
+                            muted
+                            // width="300"
+                        ></video>
                     </EmptyStyle>
                 )}
                 <Cards layout variants={cards} initial="hidden" animate="show">
@@ -99,7 +108,7 @@ const Cart = () => {
                                         alt={item.title}
                                         height="128"
                                         width="128"
-                                        layout="fixed"
+                                        layout="intrinsic"
                                     />
                                     <CardInfo>
                                         <h3>{item.title}</h3>
@@ -122,13 +131,15 @@ const Cart = () => {
                                 </Card>
                             );
                         })}
+                    {cartItems.length >= 1 && (
+                        <Checkout layout>
+                            <h3>Subtotal: £{totalPrice}</h3>
+                            <button onClick={handleCheckout}>
+                                <h5>Purchase</h5>
+                            </button>
+                        </Checkout>
+                    )}
                 </Cards>
-                {cartItems.length >= 1 && (
-                    <Checkout layout>
-                        <h3>Subtotal: £{totalPrice}</h3>
-                        <button onClick={handleCheckout}>Purchase</button>
-                    </Checkout>
-                )}
             </CartStyle>
         </CartWrapper>
     );

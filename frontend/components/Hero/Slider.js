@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
+
 import Link from 'next/link';
 import { sliderData } from '../../lib/sliderData'
 import { SliderContainer, SlideTitle } from '../../styles/HomePageStyles';

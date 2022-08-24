@@ -5,8 +5,27 @@ export const DetailsStyle = styled.div`
     justify-content: space-between;
     margin-top: 5rem;
     height: 80%;
-    img {
-        width: 40%;
+    flex-wrap: wrap;
+    align-items: center;
+
+    h4 {
+        margin: 0.5rem 0 1rem 0;
+    }
+
+    hr {
+        margin-bottom: 2rem;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0)
+        );
+    }
+
+    @media screen and (max-width: 1070px) {
+        justify-content: center;
     }
 `;
 
@@ -17,6 +36,11 @@ export const ProductInfo = styled.div`
         font-weight: medium;
         padding: 0.5rem 1rem;
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 1100px) {
+        width: 100%;
+        margin-top: 2rem;
     }
 `;
 

@@ -19,9 +19,30 @@ export const CartWrapper = styled(motion.div)`
 export const CartStyle = styled(motion.div)`
     width: 30%;
     background: #f1f1f1;
-    padding: 2rem 5rem;
+    /* padding: 2rem 5rem; */
     overflow-y: scroll;
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @media screen and (max-width: 1600px) {
+        width: 40%;
+    }
+
+    @media screen and (max-width: 1200px) {
+        width: 60%;
+    }
+
+    @media screen and (max-width: 800px) {
+        width: 90%;
+        padding: 2rem 1rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 90%;
+    }
+
 `;
 
 export const Card = styled(motion.div)`
@@ -32,6 +53,7 @@ export const Card = styled(motion.div)`
     overflow: hidden;
     background: white;
     padding: 2rem;
+    gap: 1rem;
     margin: 2rem 0rem;
     img {
         /* width: 8rem; */
@@ -59,17 +81,26 @@ export const EmptyStyle = styled(motion.div)`
     h1 {
         font-size: 2rem;
         padding: 2rem;
+        letter-spacing: 0.002rem;
     }
-    svg {
+    /* svg {
         font-size: 10rem;
         color: var(--secondary);
+    } */
+
+    .video__emptyCart {
+        height: 300px;
+        background: #000;
+        border-radius: 1000px;
+        -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
     }
 `;
+
 
 export const Checkout = styled(motion.div)`
     button {
         background: var(--primary);
-        padding: 1rem;
+        padding: .5rem;
         width: 100%;
         color: white;
         margin-top: 2rem;
