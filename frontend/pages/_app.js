@@ -8,8 +8,6 @@ import Footer from '../components/Footer';
 
 const client = createClient({ url: process.env.NEXT_PUBLIC_BACKEND_API });
 
-console.log(process.env.NEXT_PUBLIC_BACKEND_API);
-
 export const MyApp = ({ Component, pageProps }) => {
     return (
         <UserProvider>

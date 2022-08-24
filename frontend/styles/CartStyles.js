@@ -34,7 +34,7 @@ export const Card = styled(motion.div)`
     padding: 2rem;
     margin: 2rem 0rem;
     img {
-        width: 8rem;
+        /* width: 8rem; */
     }
 `;
 

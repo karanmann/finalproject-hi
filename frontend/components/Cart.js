@@ -1,4 +1,5 @@
 import { useStateContext } from '../lib/context';
+import Image from 'next/image'
 import {
     CartWrapper,
     CartStyle,
@@ -90,12 +91,14 @@ const Cart = () => {
                         cartItems.map((item) => {
                             return (
                                 <Card layout variants={card} key={item.slug}>
-                                    <img
+                                    <Image
                                         src={
                                             item.image.data.attributes.formats
                                                 .thumbnail.url
                                         }
                                         alt={item.title}
+                                        height={128}
+                                        width={128}
                                     />
                                     <CardInfo>
                                         <h3>{item.title}</h3>
