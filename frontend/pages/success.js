@@ -7,7 +7,7 @@ import {
     Address,
     OrderInfo,
     InfoWrapper,
-} from '../styles/SuccessPage';
+} from '../styles/SuccessPageStyles';
 
 const stripe = require('stripe')(
     `${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`
@@ -23,7 +23,7 @@ export const getServerSideProps = async (params) => {
 
 const Success = ({ order }) => {
     const route = useRouter();
-    console.log(order.customer_details.address);
+    console.log('order', order);
 
     const { line1, line2, postal_code, city, state, country } =
         order.customer_details.address;
@@ -63,6 +63,8 @@ const Success = ({ order }) => {
                             ))}
                         </OrderInfo>
                     </InfoWrapper>
+                    <br/>
+                    <h3>Order Total : £{order.amount_total / 100}</h3>
                     <button onClick={() => route.push('/')}>
                         <h5>Continue Shopping</h5>
                     </button>

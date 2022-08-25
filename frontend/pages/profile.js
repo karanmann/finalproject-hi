@@ -1,10 +1,15 @@
 import { useRouter } from 'next/router';
-const stripe = require('stripe')(
-    `${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`
-);
+import Image from 'next/image'
 import { withPageAuthRequired, getSession } from '@auth0/nextjs-auth0';
 import formatMoney from '../lib/formatMoney';
 import { Logout, Order, ProfileWrapper } from '../styles/ProfileStyles';
+var moment = require('moment'); // require
+import successImage from '../public/success.png'
+import cancelImage from '../public/cancel.png'
+
+const stripe = require('stripe')(
+    `${process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY}`
+);
 
 export const getServerSideProps = withPageAuthRequired({
     //ctx gives us access to user context
@@ -22,9 +27,10 @@ export const getServerSideProps = withPageAuthRequired({
     },
 });
 
-export default function Profile({ user, orders }) {
-    const route = useRouter();
 
+export const Profile = ({ user, orders }) => {
+
+    const route = useRouter();
     return (
         user && (
             <ProfileWrapper>
@@ -33,10 +39,12 @@ export default function Profile({ user, orders }) {
                 <div>
                     {orders.map((order) => (
                         <Order key={order.id}>
-                            <h1><b><u>ORDER DETAILS</u></b></h1>
-                            <h2>Order Number: {order.id}</h2>
-                            <h2>Total: {formatMoney(order.amount)}</h2>
-                            <h1>Email: {user.email}</h1>
+                        <h1><b><u>ORDER DETAILS</u></b></h1>
+                            <h2>Order Date: <span>{moment.unix(order.created).format("dddd, MMMM Do YYYY, h:mm:ss a")}</span></h2>
+                            <h2>Order Number: <span>{order.id}</span></h2>
+                            <h2>Total: <span>{formatMoney(order.amount)}</span></h2>
+                            <h2>Email: <span>{user.email}</span></h2>
+                            <div>{order.status === "succeeded" ? <Image src={successImage} alt="Success" height="20" width="20"></Image> : <Image src={cancelImage} alt="No Success" height="20" width="20"></Image>}</div>
                         </Order>
                     ))}
                 </div>
@@ -47,3 +55,5 @@ export default function Profile({ user, orders }) {
         )
     );
 }
+
+export default Profile;

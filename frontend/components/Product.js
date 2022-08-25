@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-import { ProductStyles, Pill } from '../styles/ProductStyle';
+import { ProductStyles, Pill } from '../styles/ProductStyles';
 import Link from 'next/link';
 import Loader from './Loader';
 import Image from 'next/image';

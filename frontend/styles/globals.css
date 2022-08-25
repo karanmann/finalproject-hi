@@ -5,7 +5,7 @@ body {
     padding: 0;
     margin: 0;
     margin: 0rem 10%;
-    background: #f1f1f1;
+    --base-color: #f1f1f1;
     --primary: #2d2d2d;
     --secondary: #535353;
     --primary-font: 'Archivo Black', sans-serif;
@@ -15,7 +15,7 @@ body {
     --duration: 200s;
     --scroll-start: 0;
     --scroll-end: calc(-100% - var(--gap));
-    --base-color: #f1f1f1;
+    background: var(--base-color);
     font-family: var(--secondary-font);
 }
 

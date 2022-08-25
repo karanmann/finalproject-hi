@@ -9,7 +9,7 @@ import {
     Checkout,
     Cards,
 } from '../styles/CartStyles';
-import { Quantity } from '../styles/ProductDetails';
+import { Quantity } from '../styles/ProductDetailStyles';
 import { FaShoppingCart } from 'react-icons/fa';
 import { AiFillMinusCircle, AiFillPlusCircle } from 'react-icons/ai';
 import getStripe from '../lib/getStripe';

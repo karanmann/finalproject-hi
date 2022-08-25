@@ -32,6 +32,7 @@ export const Card = styled(motion.div)`
     cursor: pointer;
     border: none;
     width: 100%;
+    max-width: 30rem;
   }
 `;
 
