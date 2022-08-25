@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import cancelImage from '../public/cancel.png';
-import { Card } from '../styles/SuccessPage';
+import { Card } from '../styles/CancelledPageStyles';
 
 const Cancelled = () => {
     const route = useRouter();

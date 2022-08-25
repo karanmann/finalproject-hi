@@ -19,6 +19,8 @@ export const SliderContainer = styled.div`
     /* position: relative;
     overflow: hidden; */
     overflow-y: hidden;
+    margin-bottom: 1rem;
+    /* background-color: black; */
 
     .slide {
         /* position: absolute; */
@@ -45,7 +47,6 @@ export const SliderContainer = styled.div`
         width: 100%;
         max-width: 53rem;
         height: 50%;
-        margin-bottom: 0.5rem;
     }
 
     .current {

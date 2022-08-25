@@ -15,19 +15,29 @@ export const Order = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     
-  
     h1 {
         font-size: 1rem;
         color: var(--primary);
         margin-bottom: 0.5rem;
         line-height: 2rem;
+        text-align: center;
     }
     h2 {
         font-size: 1rem;
         line-height: 2rem;
         color: var(--secondary);
+        align-items: flex-start;
+    }
+
+    span {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    div {
+        margin-top: 1rem;
+        text-align: center;
     }
 `;
 

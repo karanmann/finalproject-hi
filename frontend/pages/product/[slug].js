@@ -7,7 +7,7 @@ import {
     ProductInfo,
     Quantity,
     Buy,
-} from '../../styles/ProductDetails';
+} from '../../styles/ProductDetailStyles';
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 import { useStateContext } from '../../lib/context';
 import toast from 'react-hot-toast';

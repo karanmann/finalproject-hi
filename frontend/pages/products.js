@@ -1,7 +1,7 @@
 import { useQuery } from 'urql';
 import { PRODUCT_QUERY } from '../lib/query';
 import Product from '../components/Product';
-import { Gallery } from '../styles/Gallery';
+import { Gallery } from '../styles/GalleryStyles';
 import Loader from '../components/Loader';
 
 const Products = () => {
