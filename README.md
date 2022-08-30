@@ -1,4 +1,4 @@
-# MB2 - Vinal Art E-com Website
+# MB2 - Vinyl Art E-com Website
 
 ### Hyper Island - Individual Project
 
@@ -64,7 +64,7 @@ By in large we successfully hit most of our goals. If we were to redo the projec
 #### Design
 
 -   Figma
--   Styled Component
+-   Styled Components
 -   Framer Motion
 -   Moment
 -   Hot Toast
