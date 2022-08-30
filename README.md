@@ -1,4 +1,4 @@
-# MB2 - Vinal Toy E-com Website
+# MB2 - Vinal Art E-com Website
 
 ### Hyper Island - Individual Project
 
