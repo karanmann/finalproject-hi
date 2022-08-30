@@ -22,7 +22,7 @@
 -   [x] Experiment with techniques of animation on the web `Framer-Motion`
 -   [x] Being comfortable with Git, and Git workflows
 -   [x] Familiar with modern JS frameworks `Next.js` and have the ability to learn/adapt to new technologies.
--   [x] Awareness of performance bottlenecks and cross-browser issues `Lighthouse` `Chrome Dev Tools`
+-   [x] Awareness of performance bottlenecks and cross-browser issues `Lighthouse` & `Chrome Dev Tools`
 -   [ ] An understanding of common JavaScript design patterns
 -   [x] Fullstack experience, `GraphQL`, `Auth0`, `Stripe` and experience with headless CMS products `Strapi`.
 -   [ ] Develop with Typescript
@@ -67,5 +67,4 @@ By in large we successfully hit most of our goals. If we were to redo the projec
 -   Styled Component
 -   Framer Motion
 -   Moment
--   Loader
 -   Hot Toast
