@@ -1,8 +1,10 @@
-
+const withPWA = require('next-pwa')
 
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
+    dest: 'public',
+    disable: process.env.NODE_ENV === 'development',
     compiler: {
         styledComponents: true,
     },
@@ -15,4 +17,4 @@ const nextConfig = {
     },
 };
 
-module.exports = nextConfig;
+module.exports = withPWA(nextConfig);
