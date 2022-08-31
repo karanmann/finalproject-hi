@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+
+
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
@@ -7,7 +8,11 @@ const nextConfig = {
     },
     images: {
         domains: ['res.cloudinary.com', 'lh3.googleusercontent.com'],
-      },
+    },
+    i18n: {
+        locales: ['en'],
+        defaultLocale: 'en',
+    },
 };
 
 module.exports = nextConfig;

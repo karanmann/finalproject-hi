@@ -14,8 +14,19 @@ const Container = styled.div`
 	letter-spacing: 0.12rem;
 	transition: 0.3s;
 
+    h3 {
+    color: white;
+	background-color: black;
+    font-size: 14px;
+    font-weight: 700;
+	letter-spacing: 0.12rem;
+    }
+
 	@media screen and (max-width: 600px) {
-		font-size: 10px;
+	h3{
+
+        font-size: 10px;
+    }
 }
 `
 
@@ -24,7 +35,7 @@ const Container = styled.div`
 export default function Announcement() {
     return (
         <Container>
-            75% SCALE VINYL ART SCULPTURES
+        <h3>    75% SCALE VINYL ART SCULPTURES</h3>
         </Container>
     )
 }

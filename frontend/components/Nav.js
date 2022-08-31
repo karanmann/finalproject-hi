@@ -25,7 +25,7 @@ const Nav = () => {
                 <Link href={'/products'}>
                     <div>
                         <GiRabbitHead />
-                        <h3>Products</h3>
+                        <h2>Products</h2>
                     </div>
                 </Link>
                 <User />
@@ -39,7 +39,7 @@ const Nav = () => {
                         </motion.span>
                     )}
                     <FiShoppingBag />
-                    <h3>Cart</h3>
+                    <h2>Cart</h2>
                 </div>
             </NavItems>
             <AnimatePresence>{showCart && <Cart />}</AnimatePresence>

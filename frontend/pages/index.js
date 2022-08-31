@@ -67,6 +67,7 @@ const Home = () => {
                 <Announcement />
                 <Slider />
                 <Tickers />
+
             </main>
         </div>
     );

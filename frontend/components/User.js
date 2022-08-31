@@ -13,7 +13,7 @@ const User = () => {
         return (
             <div onClick={() => route.push('/api/auth/login')}>
                 <FaUserCircle />
-                <h3>Profile</h3>
+                <h2>Profile</h2>
             </div>
         );
 
@@ -23,7 +23,7 @@ const User = () => {
                 src={user.picture}
                 alt={user.name}
             />
-            <h3>{user.name}</h3>
+            <h2>{user.name}</h2>
         </Profile>
     );
 };
