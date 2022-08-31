@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Slider from '../components/Hero/Slider';
 import Tickers from '../components/Hero/Tickers';
+import Loader from '../components/Loader';
+import Announcement from "../components/Announcement"
 
 const Home = () => {
     return (
@@ -62,6 +64,7 @@ const Home = () => {
             </Head>
 
             <main>
+                <Announcement />
                 <Slider />
                 <Tickers />
             </main>

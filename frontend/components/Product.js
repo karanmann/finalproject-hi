@@ -2,6 +2,7 @@ import { ProductStyles, Pill } from '../styles/ProductStyles';
 import Link from 'next/link';
 import Loader from './Loader';
 import Image from 'next/image';
+
 const Product = ({ product }) => {
     //Extract the info from props
     const { title, price, image, slug, availibility } = product.attributes;

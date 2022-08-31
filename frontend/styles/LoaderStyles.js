@@ -139,6 +139,11 @@ export const LoaderStyle = styled.span`
         background-repeat: no-repeat;
         box-sizing: border-box;
         animation: rotationBack 4s linear infinite reverse;
+        -webkit-animation-name: rotationBack;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-fill-mode: reverse;
     }
     @keyframes rotationBack {
         0% {
