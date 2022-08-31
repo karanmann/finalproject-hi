@@ -119,8 +119,8 @@ const ProductDetails = () => {
                     <div>
                         <h3>{titleInTheBox}</h3>
                         <ul>
-                            {inTheBox.map((content) => (
-                                <li>{content}</li>
+                            {inTheBox.map((content, index) => (
+                                <li key={index}>{content}</li>
                             ))}
                         </ul>
                     </div>
