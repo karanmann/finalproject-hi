@@ -92,6 +92,7 @@ export const SlideTitle = styled.h2`
     font-size: 2rem;
     letter-spacing: -0.11rem;
     display: flex;
+    text-align: center;
 `;
 
 // Tickers Styles

@@ -1,7 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-
-import Link from 'next/link';
 import { sliderData } from '../../lib/sliderData'
 import { SliderContainer, SlideTitle } from '../../styles/HomePageStyles';
 import Loader from '../Loader';
