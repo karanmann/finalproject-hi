@@ -36,6 +36,11 @@
     "price": {
       "type": "float",
       "required": true
+    },
+    "availibility": {
+      "type": "boolean",
+      "default": true,
+      "required": true
     }
   }
 }

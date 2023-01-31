@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/* @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
@@ -13,8 +13,8 @@ const nextConfig = {
         defaultLocale: 'en',
     },
     env: {
-        AUTH0_BASE_URL: process.env.VERCEL_URL || 'http://localhost:3000'
-      }
+        AUTH0_BASE_URL: process.env.VERCEL_URL || 'http://localhost:3000',
+    },
 };
 
 module.exports = nextConfig;
